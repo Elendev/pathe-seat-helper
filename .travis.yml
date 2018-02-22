@@ -1,0 +1,18 @@
+dist: trusty
+sudo: required
+
+language: node_js
+
+addons:
+  sonarcloud:
+    organization: "elendev-github"
+    token:
+      secure: "euPrMWtwRy3lveMVDkTJJDDNenQfkFV6T6G2qEglFlg/Qa/NFLO6gCxPJS/A1vi5c0lfR4PRs2LG/y6bUi3/dWi4V7EgFpkP+xyjZvDr+zb11p93R+lNzbbz2V9yvKQCTST60LTDGPCuA6lJSuYH1+tIZlxsOus85n+ExJ/rN/8wcyaaa+KhqpE9yWR2Aw8dNyAV/Cl7HxN70w3+7wO/CZ3tx6L25ZEGunDKHjz7fe5evDC3vmzZoUbYepC/DFehpkUckFNFPOgTfgT4q7u9AALBHKqqAHYauzK41YHn6Ykbphn0rPheNVNDb3VSgootfyLC8LSGRm4yNCYl+biAfw6tCumyYga7UzIUK5QXDo659td7tEtaFp7pLZ+rrjBl5MTCa3isX61g73e7lI29SUFTm56bqEqNyVeKOCffLiEcPOZnc4GbOG9tqA+bzumOsJZcipnm0f/2wFdirsbDO56xbaNFByc0ng3qI1UbHm3OrY9yxSyNjR433csDZ0qCpwebAql20x3RVmZD/MSRd/flV3gdnaya2xRiMOXYQ+Y5GeMrHZyR07zuiSi3si5NTAePG3DGnH+PzldAfJ6FtwRSHFeSdKf6Mk8xW0zdljA8xWn0fllB8k88cV9grKkrE2gBO0N8bMNWO1syAPDM38GzzhS2hIcLOtp8qqSjBHM="
+node_js:
+  - "iojs"
+  - "7"
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
