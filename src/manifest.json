@@ -1,7 +1,7 @@
 {
-  "name": "Seat Helper",
+  "name": "Pathe.ch Seat Helper",
   "description" : "Display the seat numbers on the seat-selection page on the Pathe.ch website",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
   "permissions": [
     "activeTab",
