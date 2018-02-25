@@ -1,0 +1,15 @@
+
+.elendev-seat-helper-tooltip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+
+    pointer-events: none;
+}
+
+.elendev-seat-helper-tooltip.hidden {
+    display: none;
+}

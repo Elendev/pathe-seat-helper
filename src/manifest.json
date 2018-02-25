@@ -1,12 +1,19 @@
 {
   "name": "Seat Helper",
-  "description" : "Display the seat numbers on the Pathe.ch website",
+  "description" : "Display the seat numbers on the seat-selection page on the Pathe.ch website",
   "version": "1.0",
   "manifest_version": 2,
   "permissions": [
     "activeTab",
-    "storage"
+    "https://pathe.ch/en/*/seats/*",
+    "https://pathe.ch/fr/*/places-numerotees/*",
+    "https://pathe.ch/de/*/tickets/*"
   ],
+  "icons": {
+    "225": "icon.png",
+    "128": "icon-128.png",
+    "48": "icon-48.png"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -15,6 +22,7 @@
         "https://pathe.ch/de/*/tickets/*"
       ],
       "js": ["seat-helper.js"],
+      "css": ["tooltip.css"],
       "run_at": "document_end"
     }
   ]
